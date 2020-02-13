@@ -13,18 +13,13 @@ template <typename T>
 class stack
 {
 public:
-    stack(const int Size)
+    explicit stack(const int Size)
     {
         bottom = new T [Size];
         top = bottom;
         size = Size;
     }
-    ~stack()
-    {
-        top = nullptr;
-        size = 0;
-        delete [] bottom;
-    }
+
     explicit stack(stack&& object)
     {
         bottom = object.bottom;
@@ -34,6 +29,13 @@ public:
         object.bottom = nullptr;
         object.top = nullptr;
         object.size = 0;
+    }
+
+    ~stack()
+    {
+        top = nullptr;
+        size = 0;
+        delete [] bottom;
     }
 
     void push(const T& value)

@@ -3,6 +3,7 @@
 #ifndef INCLUDE_HEADER_HPP_
 #define INCLUDE_HEADER_HPP_
 
+#include <iostream>
 
 using std::new;
 using std::delete;

@@ -4,6 +4,8 @@
 #define INCLUDE_HEADER_HPP_
 
 #include <iostream>
+#include <exception>
+#include <stdexcept>
 
 using std::new;
 using std::delete;

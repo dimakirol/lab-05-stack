@@ -7,8 +7,6 @@
 #include <exception>
 #include <stdexcept>
 
-using std::new;
-using std::delete;
 using std::out_of_range;
 using std::length_error;
 
@@ -45,7 +43,7 @@ public:
     {
         if ((top - bottom) >= size)
         {
-            throw length_error;
+            throw length_error("A");
         }
         *top = value;
         ++top;
@@ -55,7 +53,7 @@ public:
     {
         if ((top - bottom) >= size)
         {
-            throw length_error;
+            throw length_error("B");
         }
         *top = value;
         value = 0; //!!!!!!!!!!!!!!!!!!!!!!!!CHECK!
@@ -63,14 +61,14 @@ public:
     }
 
     template <typename ... Args>
-    void push_emplace(T&& value, Args&&... values)
+    void push_emplace(Args&&... value)
     {
        if ((top - bottom) >= size)
        {
-           throw length_error;
+           throw length_error("C");
        }
-       push(value);
-       push_emplace(values);
+       push(T(value...));
+       //push_emplace(values);
        //po idee perviy element is mnogotochiya
        //budet uhodit na value takim obrazom, budet
        //sokrashat`sa spisok values
@@ -79,7 +77,7 @@ public:
     T pop(){
         if (((top - 1) < bottom) || ((top - 1) == nullptr))
         {
-            throw out_of_range;
+            throw out_of_range("A");
         }
         --top;
         return *top;
@@ -88,7 +86,7 @@ public:
     const T& head() const {
         if ((top - 1) == nullptr)
         {
-            throw out_of_range;
+            throw out_of_range("B");
         }
         return *(top - 1);
     }

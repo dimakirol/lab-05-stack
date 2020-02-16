@@ -3,7 +3,7 @@
 #include "header.hpp"
 #include <gtest/gtest.h>
 
-TEST(Example, EmptyTest) 
+TEST(Example, EmptyTest)
 {
   stack<int> test(4);
   int a = 2, b = 3, c = 4;
@@ -23,7 +23,7 @@ TEST(Example, EmptyTest)
   EXPECT_EQ(test.pop(), 2);
 }
 
-// TEST(stack_t, Text) 
+// TEST(stack_t, Text)
 // {
 //   stack_st<int> test;
 //   test.push_emplace(1);
@@ -45,7 +45,7 @@ TEST(Example, EmptyTest)
 //   EXPECT_EQ(test.pop(), 1);
 // }
 
-int main(int argc, char **argv) 
+int main(int argc, char **argv)
 {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

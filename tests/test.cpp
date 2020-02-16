@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 #include "header.hpp"
 
-TEST(stack, Text)
+TEST(Example, EmptyTest)
 {
     stack<int> test;
     int a = 2, b = 3, c = 4;

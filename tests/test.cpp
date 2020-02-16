@@ -25,7 +25,7 @@ TEST(Example, EmptyTest)
 
 TEST(stack, Text)
 {
-  stack<int> test(4);
+  stack<int> test(6);
   test.push_emplace(1);
   test.push_emplace(3);
   test.push(2);

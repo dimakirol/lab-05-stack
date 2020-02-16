@@ -5,37 +5,42 @@
 
 TEST(Example, EmptyTest)
 {
-  stack<int> test(4);
-  int a = 2, b = 3, c = 4;
+  stack<int> test(6);
+  int a = 1, b = 2, c = 3;
 
   test.push(a);
   test.push(b);
   test.push(c);
-  test.push(12);
+  test.push(4);
+  test.push(5);
+  test.push(6);
 
-  EXPECT_EQ(test.head(), 12);
-  EXPECT_EQ(test.pop(), 12);
+  EXPECT_EQ(test.head(), 6);
+  EXPECT_EQ(test.pop(), 6);
+  EXPECT_EQ(test.pop(), 5);
   EXPECT_EQ(test.pop(), 4);
   EXPECT_EQ(test.pop(), 3);
   EXPECT_EQ(test.pop(), 2);
+  EXPECT_EQ(test.pop(), 1);
+
 }
 
 TEST(stack, Text)
 {
   stack<int> test(6);
   test.push_emplace(1);
-  test.push_emplace(3);
-  test.push(2);
+  test.push_emplace(2);
   test.push(3);
   test.push(4);
-  test.push(12);
+  test.push(5);
+  test.push(6);
 
-  EXPECT_EQ(test.head(), 12);
-  EXPECT_EQ(test.pop(), 12);
+  EXPECT_EQ(test.head(), 6);
+  EXPECT_EQ(test.pop(), 6);
+  EXPECT_EQ(test.pop(), 5);
   EXPECT_EQ(test.pop(), 4);
   EXPECT_EQ(test.pop(), 3);
   EXPECT_EQ(test.pop(), 2);
-  EXPECT_EQ(test.pop(), 3);
   EXPECT_EQ(test.pop(), 1);
 }
 

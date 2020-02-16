@@ -5,7 +5,7 @@
 
 TEST(Example, EmptyTest)
 {
-    stack<int> test;
+    stack<int> test(4);
     int a = 2, b = 3, c = 4;
 
     test.push(a);

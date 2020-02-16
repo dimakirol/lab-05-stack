@@ -22,7 +22,6 @@ TEST(Example, EmptyTest)
   EXPECT_EQ(test.pop(), 3);
   EXPECT_EQ(test.pop(), 2);
   EXPECT_EQ(test.pop(), 1);
-
 }
 
 TEST(stack, Text)

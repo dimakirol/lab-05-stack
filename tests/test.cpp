@@ -23,9 +23,9 @@ TEST(Example, EmptyTest)
   EXPECT_EQ(test.pop(), 2);
 }
 
-TEST(stack_t, Text)
+TEST(stack, Text)
 {
-  stack_st<int> test;
+  stack<int> test(4);
   test.push_emplace(1);
   test.push_emplace(3);
   test.push(2);

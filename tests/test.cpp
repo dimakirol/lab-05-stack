@@ -27,12 +27,15 @@ TEST(Example, EmptyTest)
 TEST(stack, Text)
 {
   stack<int> test(6);
-  test.push_emplace(1,2);
-  //test.push_emplace(2);
+  test.push_emplace(1);
+  test.push_emplace(2);
   test.push(3);
   test.push(4);
   test.push(5);
   test.push(6);
+
+  EXPECT_EQ(std::is_move_assignable<stack<int>>::value, true);
+  EXPECT_EQ(std::is_move_constructible<stack<int>>::value, true);
 
   EXPECT_EQ(test.head(), 6);
   EXPECT_EQ(test.pop(), 6);

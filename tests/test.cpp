@@ -34,8 +34,8 @@ TEST(stack, Text)
   test.push(5);
   test.push(6);
 
-  EXPECT_EQ(std::is_move_assignable<stack<int>>, true);
-  EXPECT_EQ(std::is_move_constructible<stack<int>>, true);
+  EXPECT_EQ(std::is_move_assignable<stack<int>>::test, true);
+  EXPECT_EQ(std::is_move_constructible<stack<int>>::test, true);
 
   EXPECT_EQ(test.head(), 6);
   EXPECT_EQ(test.pop(), 6);

@@ -27,13 +27,9 @@ TEST(Example, EmptyTest)
 TEST(stack, Text)
 {
   stack<int> test(6);
-<<<<<<< HEAD
   test.push_emplace(1);
   test.push_emplace(2);
   test.push(3);
-=======
-  test.push_emplace(1, 2, 3);
->>>>>>> 2f2e81b1e2c0960823eb5b3ec74bb286411f4e41
   test.push(4);
   test.push(5);
   test.push(6);

@@ -15,7 +15,7 @@ TEST(Example, EmptyTest)
   test.push(5);
   test.push(6);
 
-  EXPECT_EQ(std::is_move_assignable<stack<int>>::value, true);
+  EXPECT_EQ(std::is_move_assignable<stack<int>>::value, false);
   EXPECT_EQ(std::is_move_constructible<stack<int>>::value, true);
 
   EXPECT_EQ(test.head(), 6);

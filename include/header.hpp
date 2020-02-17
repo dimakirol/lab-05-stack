@@ -61,13 +61,11 @@ public:
     }
 
     template <typename ... Args>
-    void push_emplace(Args&&... value)
-    {
-       if ((top - bottom) >= size)
-       {
-           throw length_error("C");
-       }
-       push(T(value...));
+    void push_emplace(Args &&... value) {
+        for (auto t : std::initializer_list<T>{ value... })
+        {
+            push(t);
+        }
        //push_emplace(values);
        //po idee perviy element is mnogotochiya
        //budet uhodit na value takim obrazom, budet

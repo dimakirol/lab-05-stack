@@ -63,7 +63,7 @@ public:
 
     template <typename ... Args>
     void push_emplace(Args &&... value) {
-        for (auto t : std::forward<T>(value...))
+        for (auto t : std::forward<T>(value)...)
         {
             push(t);
         }

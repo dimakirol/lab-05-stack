@@ -56,20 +56,16 @@ public:
             throw length_error("B");
         }
         *top = value;
-        value = 0; //!!!!!!!!!!!!!!!!!!!!!!!!CHECK!
+        value = 0;
         ++top;
     }
 
     template <typename ... Args>
     void push_emplace(Args &&... value) {
-        for (auto t : std::initializer_list<T>{ value... })
+        for (auto t : std::forward<T>(value...))
         {
             push(t);
         }
-       //push_emplace(values);
-       //po idee perviy element is mnogotochiya
-       //budet uhodit na value takim obrazom, budet
-       //sokrashat`sa spisok values
     }
 
     T pop(){

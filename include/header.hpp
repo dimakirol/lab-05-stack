@@ -67,6 +67,7 @@ public:
         for (uint64_t i = 0; i < sizeof...(value); ++i)
         {
             push(t[i]);
+        }
     }
 
     T pop(){

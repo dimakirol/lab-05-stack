@@ -30,16 +30,13 @@ TEST(Example, EmptyTest)
 TEST(stack, Text)
 {
   stack<int> test(6);
-  test.push_emplace(1, 2, 3, 4);
+  test.push_emplace(1);
   test.push(5);
   test.push(6);
 
   EXPECT_EQ(test.head(), 6);
   EXPECT_EQ(test.pop(), 6);
   EXPECT_EQ(test.pop(), 5);
-  EXPECT_EQ(test.pop(), 4);
-  EXPECT_EQ(test.pop(), 3);
-  EXPECT_EQ(test.pop(), 2);
   EXPECT_EQ(test.pop(), 1);
 }
 

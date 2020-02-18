@@ -6,6 +6,7 @@
 #include <iostream>
 #include <exception>
 #include <stdexcept>
+#include <utility>
 
 using std::out_of_range;
 using std::length_error;

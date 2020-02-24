@@ -1,5 +1,8 @@
 # Лабораторная работа №5
+[![Travis][build-badge]][build]
 
+[build-badge]: https://img.shields.io/travis/dimakirol/lab-05-stack/master.png?style=flat-square
+[build]: https://travis-ci.org/dimakirol/lab-05-stack
 ## Задание 1
 Реализовать некопируемый перемещаемый шаблон класса **stack** с методами `pop`, `push`, `head`. 
 ```cpp
